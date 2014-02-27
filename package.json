@@ -24,6 +24,9 @@
     "node": ">= 0.8.0"
   },
   "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-internal": "~0.4.7",
+    "chalk": "^0.4.0",
     "esprima": "~1.0.4",
     "underscore": "~1.6.0",
     "resolve-repository": "git://github.com/mr-moon/resolve-repository.git"
@@ -36,10 +39,5 @@
     "LICENSE-MIT"
   ],
   "readme": "",
-  "readmeFilename": "README.md",
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-contrib-internal": "~0.4.7",
-    "chalk": "^0.4.0"
-  }
+  "readmeFilename": "README.md"
 }
