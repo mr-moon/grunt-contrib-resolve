@@ -35,7 +35,7 @@ resolve: {
 }
 ```
 
-All dependent code will be resolved to `build/resolved.js` file.
+All dependent code will be resolved to `build/resolved.js` file. This is done by parsing (with [esprima](http://esprima.org/ "Esprima")) your code files and trying to match expression references with implementation files in repositories.
 
 ## Important notes
 
