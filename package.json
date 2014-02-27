@@ -1,0 +1,45 @@
+{
+  "name": "grunt-contrib-resolve",
+  "description": "Resolves JavaScript dependencies.",
+  "version": "0.0.1-alpha",
+  "homepage": "https://github.com/mr-moon/grunt-contrib-resolve",
+  "author": {
+    "name": "Alexander Moon",
+    "url": "https://github.com/mr-moon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mr-moon/grunt-contrib-resolve.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mr-moon/grunt-contrib-coffee/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mr-moon/grunt-contrib-coffee/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "esprima": "~1.0.4",
+    "underscore": "~1.6.0",
+    "resolve-repository": "git://github.com/mr-moon/resolve-repository.git"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ],
+  "readme": "",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-internal": "~0.4.7",
+    "chalk": "^0.4.0"
+  }
+}
