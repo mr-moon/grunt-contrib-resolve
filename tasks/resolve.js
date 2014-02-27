@@ -13,6 +13,7 @@ module.exports = function(grunt) {
   var util = require('util');
   var fs = require('fs');
   var chalk = require('chalk');
+  var path = require('path');
   var esprima = require('esprima');
   var _ = require('underscore');
   var ignored = {};
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
     grunt.log.writeln(util.inspect.call(this, input, {depth: null}));
   };
 
-  var type = function(input) {
+  var type = function(input){
     return Object.prototype.toString.call(input).replace(/\[object ([a-z]+)\]/i, "$1").toLowerCase();
   };
 
@@ -152,6 +153,8 @@ module.exports = function(grunt) {
     return output;
   }
 
+  var builtinRepositoryPath = path.relative('.', __dirname + '/../node_modules/resolve-repository/repository');
+
   grunt.registerMultiTask('resolve', 'Resolving dependencies for js files', function () {
     var options = this.options({});
 
@@ -160,9 +163,9 @@ module.exports = function(grunt) {
     } else if (type(options.repos) === 'array') {
       repos = options.repos.splice();
     }
-
-    if (repos.indexOf('node_modules/resolve-repository/repository') === -1) {
-      repos.push('node_modules/resolve-repository/repository');
+    
+    if (repos.indexOf(builtinRepositoryPath) === -1) {
+      repos.push(builtinRepositoryPath);
     }
 
     this.files.forEach(function(f) {
